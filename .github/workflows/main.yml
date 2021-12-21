@@ -37,7 +37,7 @@ jobs:
         cache-dependency-path: '**/package-lock.json'
     - run: npm ci
     - run: npm test
-    deploy:
+  deploy:
     needs: test # Requires CI part to be succesfully completed
     runs-on: ubuntu-latest
     steps:
