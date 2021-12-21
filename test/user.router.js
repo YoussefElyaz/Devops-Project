@@ -22,12 +22,12 @@ describe('User REST API', () => {
 
     it('create a new user', (done) => {
       const user = {
-        username: 'Youssef',
-        firstname: 'Youssef',
-        lastname: 'ELYAZIGHI'
+        username: 'sergkudinov',
+        firstname: 'Sergei',
+        lastname: 'Kudinov'
       }
       chai.request(app)
-        .post('/user1')
+        .post('/user')
         .send(user)
         .then((res) => {
           chai.expect(res).to.have.status(201)
@@ -36,7 +36,7 @@ describe('User REST API', () => {
           done()
         })
         .catch((err) => {
-           done(err)
+          done(err)
         })
     })
     
