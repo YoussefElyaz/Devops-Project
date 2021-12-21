@@ -1,6 +1,12 @@
-# User API web application
+# Devops Project
 
-It is a basic NodeJS web application exposing REST API that creates and stores user parameters in [Redis database](https://redis.io/).
+This project allows you to run a basic NodeJS web application exposing REST API that creates and stores
+user parameters in Redis database.
+ We use a CI/CD (including deployment) pipeline with[Github Actions](https://github.com/features/actions
+ / [Heroku]:(https://dashboard.heroku.com/apps).
+ We have configured a virtual environment with vagrant and have provisioned it with
+Ansible. We also created a docker image of our application within Dockerhub and made a docker
+orchestration using docker compose.
 
 ## Functionality
 
