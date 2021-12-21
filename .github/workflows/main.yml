@@ -13,7 +13,7 @@ jobs:
     # Define working-directory if you application is in a subfolder
     defaults:
       run:
-        working-directory: src/
+        working-directory: userapi
      # Service containers to run with runner-job
     services:
       # Label used to access the service container
@@ -48,3 +48,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: shrouded-taiga-19455 # Must be unique in Heroku
           heroku_email: youssefshinsy@outlook.fr
+          appdir: userapi
