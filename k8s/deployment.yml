@@ -15,8 +15,8 @@ spec:
         app: userapi
     spec:
       containers:
-      - name: usserapi
-        image: devopsproject/
+      - name: userapi
+        image: driael/364c7fd23d7
         ports:
           - containerPort: 3000
         env:
