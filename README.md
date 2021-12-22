@@ -222,7 +222,7 @@ kubectl get pods
 We can see that we have 2 pods runnings now for every deployment we made.  
 
 
-### 8. Implement Monitoring to your containerized application
+### 8. Implement Monitoring
 
 For the Monitoring part, we run the following command to get our deployment structure on kiali.
 
