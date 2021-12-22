@@ -188,6 +188,10 @@ When we Open the minikube dashboard We can see that the deployments are done :
 ```
 minikube dashboard
 ```
+![kube](https://user-images.githubusercontent.com/56431002/147148535-2e42f406-18de-499d-a3e3-6be8dbfddb32.JPG)
+![pv](https://user-images.githubusercontent.com/56431002/147148720-624fcdba-56b1-4139-9dae-799656bc6fd2.JPG)
+![pvc](https://user-images.githubusercontent.com/56431002/147148728-031304ba-64a2-4fbe-aec1-294b5c3c23c1.JPG)
+
 
 ### 7. Make a service mesh using Istio
 
