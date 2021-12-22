@@ -143,6 +143,7 @@ docker pull dockerfile
 
 We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)(link to see the image) 
 
+![dockcompo](https://user-images.githubusercontent.com/56431002/147129903-6fd86e4c-809f-4b70-b13c-586d59036930.JPG)
 ![Capturedh](https://user-images.githubusercontent.com/56431002/147129731-ea652d9d-dc70-4a80-92d7-f979109b6fc3.JPG)
 
 To pull the Image run the command:
@@ -157,8 +158,6 @@ For this part we created a docker-compose.yml at the root of the project wish wi
 ```
 docker-compose up 
 ```
-![dockcompo](https://user-images.githubusercontent.com/56431002/147129903-6fd86e4c-809f-4b70-b13c-586d59036930.JPG)
-
 ## Docker orchestration using Kubernetes
 
 1. Manifest Yaml
