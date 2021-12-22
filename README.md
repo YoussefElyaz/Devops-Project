@@ -133,12 +133,14 @@ We builded a Docker image of our application,to pull the image From the userapi 
 ```
 docker pull dockerfile
 ```
+![Capturedoc](https://user-images.githubusercontent.com/56431002/147129714-b0d98e2f-60ba-4cd6-b50f-01837d803e4f.JPG)
 
 
 2. The image on Docker Hub
 
 We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)(link to see the image) 
 
+![Capturedh](https://user-images.githubusercontent.com/56431002/147129731-ea652d9d-dc70-4a80-92d7-f979109b6fc3.JPG)
 
 To pull the Image run the command:
 
@@ -152,6 +154,7 @@ For this part we created a docker-compose.yml at the root of the project wish wi
 ```
 docker-compose up 
 ```
+![dockcompo](https://user-images.githubusercontent.com/56431002/147129903-6fd86e4c-809f-4b70-b13c-586d59036930.JPG)
 
 ## Docker orchestration using Kubernetes
 
@@ -170,12 +173,12 @@ cd k8s
 ```
 Then we create the deployments and services :
 ```
-kubectl create -f service.yaml
-kubectl create -f service-redis.yaml
-kubectl create -f deployment.yaml
-kubectl create -f deployment-redis.yaml
-kubectl create -f pv-claim.yaml
-kubectl create -f pvolume.yaml
+kubectl create -f service.yml
+kubectl create -f service-redis.yml
+kubectl create -f deployment.yml
+kubectl create -f deployment-redis.yml
+kubectl create -f pv-claim.yml
+kubectl create -f pvolume.yml
 ```
 
 When we Open the minikube dashboard We can see that the deployments are done :
