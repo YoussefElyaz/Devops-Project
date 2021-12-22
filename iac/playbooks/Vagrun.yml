@@ -1,11 +1,8 @@
 ---
-- hosts: gitlab_server
+- hosts: userapiVM_server
   # Run commands as root
   become: true
   # Roles to be executed on these hosts
   roles:
-  - role: gitlab/install
+  - role: userapiVM/install
     tags: install
-
-  - role: gitlab/healthchecks
-    tags: check
