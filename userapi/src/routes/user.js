@@ -21,8 +21,7 @@ userRouter
       resp.status(201).json(respObj)
     })
   })
-  .get('/:username', (req, resp, next) => { // Express URL params - https://expressjs.com/en/guide/routing.html
-    // TODO Create get method API
+  .get('/:username', (req, resp, next) => { 
     const username = req.params.username
     userController.get(username, (err, res) => {
       let respObj

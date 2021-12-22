@@ -4,7 +4,7 @@ const userRouter = require('./routes/user')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3000
 
 const db = require('./dbClient')
 db.on("error", (err) => {
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 
-// Default Root: [ http://localhost:5000/ ] 
+// Default Root: [ http://localhost:3000/ ] 
 app.get('/', (req, res) => res.send('Welcome to Youssef and Augustin Project'))
 
 //Utiliser les routes crées
