@@ -111,7 +111,7 @@ On Package.json we used the script "test": "mocha test/*.js", the script "test":
 
 
 2-The image on Docker Hub
-hello here
+test
 
 
 ## Author
