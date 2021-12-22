@@ -21,12 +21,12 @@ Implement Monitoring by using Prometheus and Grafana.
 
 1. Web App
 2. CI/CD pipeline
-3. virtual environment and IaC approach
-4. Build Docker image
+3. Virtual environment and IaC approach
+4. Docker image
 5. container orchestration
 6. docker orchestration using Kubernetes
 7. service mesh using Istio
-8.Implement Monitoring
+8. Implement Monitoring
 
 ## Installation
 
@@ -100,15 +100,25 @@ On Package.json we used the script "test": "mocha test/*.js", the script "test":
 ## CI/CD pipeline
 
 1. We Created a Git repository for the User API project and commited all the files.
-2. CI Workflow connects Node.js application to Redis
-3. Configuring the worklow to deploy to Heroku
+2. The CI Workflow connects Node.js application to Redis
+3. We Configured the worklow to deploy to Heroku
+![Capturegit](https://user-images.githubusercontent.com/56431002/147022515-e80ccbde-a270-4822-ad3b-9f798c1f71a8.JPG)
+
+## Virtual environment and IaC approach
+
+## Docker image
+1- The Docker image for our application
+![Capturedoc](https://user-images.githubusercontent.com/56431002/147024089-1ceb0b86-c9df-4ef6-b250-19af789d0f7e.JPG)
+
+2-The image on Docker Hub
+![Capturedh1](https://user-images.githubusercontent.com/56431002/147024345-6ea595d9-655e-4e04-9e23-285c43223b3d.JPG)
+
+![Capturedh](https://user-images.githubusercontent.com/56431002/147024425-b473377d-13cf-4adb-a71f-743ec174093f.JPG)
 
 
 
 ## Author
 
-Youssef ELYAZIGHI  
-youssef.elyazighi@edu.ece.fr
+Youssef ELYAZIGHI  youssef.elyazighi@edu.ece.fr
 
-Augustin BERTHOD
-augustin.berthod@edu.ece.fr
+Augustin BERTHOD  augustin.berthod@edu.ece.fr
