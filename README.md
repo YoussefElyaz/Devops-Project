@@ -124,7 +124,7 @@ vagrant up
 ```
 ## Docker image
 
-1- The Docker image of our application
+1. The Docker image of our application
 
 We builded a Docker image of our application,to pull the image From the userapi Folder of the project, run :
 
@@ -133,7 +133,7 @@ docker pull dockerfile
 ```
 Photo1
 
-2-The image on Docker Hub
+2. The image on Docker Hub
 
 We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7) 
 Photo2
@@ -158,10 +158,32 @@ docker-compose up
 
 We created the kubernetes manifest yaml files ( deployment, service, persistent volume and persistent volume claim) wish will allow us to move and scale our containerized applications across clouds and data centers.
 
+To deploy the Manifest files we first started minikube with 
+```
+minikube start
+```
 
+Then we run the following commands to get to the right file: and create a deployment:
+```
+cd k8s
+```
+Then create the deployments and services :
+```
+kubectl create -f service-app.yaml
+kubectl create -f service-redis.yaml
+kubectl create -f deployment-app.yaml
+kubectl create -f deployment-redis.yaml
+```
+
+Open the minikube dashboard
+```
+minikube dashboard
+```
+
+We can see that the deployments are done.
 
 ## Author
 
-Youssef ELYAZIGHI  youssef.elyazighi@edu.ece.fr
+Youssef ELYAZIGHI: youssef.elyazighi@edu.ece.fr
 
-Augustin BERTHOD  augustin.berthod@edu.ece.fr
+Augustin BERTHOD: augustin.berthod@edu.ece.fr
