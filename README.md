@@ -133,12 +133,14 @@ We builded a Docker image of our application,to pull the image From the userapi 
 ```
 docker pull dockerfile
 ```
+![Capturedoc](https://user-images.githubusercontent.com/56431002/147129714-b0d98e2f-60ba-4cd6-b50f-01837d803e4f.JPG)
 
 
 2. The image on Docker Hub
 
 We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)(link to see the image) 
 
+![Capturedh](https://user-images.githubusercontent.com/56431002/147129731-ea652d9d-dc70-4a80-92d7-f979109b6fc3.JPG)
 
 To pull the Image run the command:
 
@@ -152,6 +154,7 @@ For this part we created a docker-compose.yml at the root of the project wish wi
 ```
 docker-compose up 
 ```
+![Capturegit](https://user-images.githubusercontent.com/56431002/147129776-c0717405-fd3c-47a1-95ae-9fd9c47f21fa.JPG)
 
 ## Docker orchestration using Kubernetes
 
