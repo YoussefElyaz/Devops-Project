@@ -137,7 +137,7 @@ docker pull dockerfile
 ![Capturedoc](https://user-images.githubusercontent.com/56431002/147129714-b0d98e2f-60ba-4cd6-b50f-01837d803e4f.JPG)
 ![dockcompo](https://user-images.githubusercontent.com/56431002/147129903-6fd86e4c-809f-4b70-b13c-586d59036930.JPG)
 
-2. The image on Docker Hub
+2. The App's image on Docker Hub
 
 We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)(link to see the image) 
 
