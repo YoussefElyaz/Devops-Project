@@ -23,9 +23,9 @@ Implement Monitoring by using Prometheus and Grafana.
 2. CI/CD pipeline
 3. Virtual environment and IaC approach
 4. Docker image
-5. container orchestration
-6. docker orchestration using Kubernetes
-7. service mesh using Istio
+5. Container orchestration
+6. Docker orchestration using Kubernetes
+7. Service mesh using Istio
 8. Implement Monitoring
 
 ## Installation
@@ -101,17 +101,63 @@ On Package.json we used the script "test": "mocha test/*.js", the script "test":
 
 1. We Created a Git repository for the User API project and commited all the files.
 2. The CI Workflow connects Node.js application to Redis
-3. We Configured the worklow to deploy to Heroku
+3. We Configured the worklow to deploy to Heroku and put the Heroku API Key on Github->Repository->Settings->Secret
 ![Capturegit](https://user-images.githubusercontent.com/56431002/147022515-e80ccbde-a270-4822-ad3b-9f798c1f71a8.JPG)
+
+To Test the CI/CD pipeline, re-rum the project and go to Actions.
 
 ## Virtual environment and IaC approach
 
-## Docker image
-1- The Docker image for our application
+1. Launch vagrant
 
+We configured a Linux VM with vagrant and we provionned it with Ansible.
+
+From the root directory of the project, run :
+```bash
+cd iac
+```
+
+Then run the following command:
+
+```
+vagrant up
+```
+## Docker image
+
+1- The Docker image of our application
+
+We builded a Docker image of our application,to pull the image From the userapi Folder of the project, run :
+
+```
+docker pull dockerfile
+```
+Photo1
 
 2-The image on Docker Hub
-test
+
+We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7) 
+Photo2
+
+To pull the Image run the command:
+
+```
+docker pull driael/364c7fd23d7
+```
+
+## Container orchestration
+
+
+```
+docker-compose up
+```
+
+## Docker orchestration using Kubernetes
+
+
+1. Manifest Yaml
+
+We created the kubernetes manifest yaml files ( deployment, service, persistent volume and persistent volume claim) wish will allow us to move and scale our containerized applications across clouds and data centers.
+
 
 
 ## Author
