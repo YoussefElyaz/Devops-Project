@@ -48,10 +48,6 @@ This application is written on NodeJS and it uses Redis database and other tools
 
 8. [Install Istio](https://istio.io/latest/docs/setup/)
 
-9. [Install Prometheus to K8s Cluster](https://www.lisenet.com/2021/install-and-configure-prometheus-monitoring-on-kubernetes/)
-
-10. [Install Grafana to K8s Cluster](https://grafana.com/docs/grafana/latest/installation/kubernetes/)
-
 
 Go to the root directory of the application ( where `package.json` file is located) and run the following command :
 
