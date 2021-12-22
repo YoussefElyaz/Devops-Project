@@ -1,33 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert
-    kompose.version: 1.26.0 (40646f47)
+  name: userapi-deployment
   labels:
-    io.kompose.service: redis
-  name: redis
+    app: userapi
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      io.kompose.service: redis
-  strategy: {}
+      app: userapi
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert
-        kompose.version: 1.26.0 (40646f47)
       labels:
-        io.kompose.network/back-tier: "true"
-        io.kompose.service: redis
+        app: userapi
     spec:
       containers:
-        - image: redis:alpine
-          name: redis-container
-          ports:
-            - containerPort: 6379
-          resources: {}
-      hostname: redis
-      restartPolicy: Always
-status: {}
+      - name: usserapi
+        image: devopsproject/
+        ports:
+          - containerPort: 3000
+        env:
+          - name: REDIS_HOST
+            value: redis-master
+          - name: REDIS_PORT
+            value: "6379"
