@@ -145,7 +145,7 @@ docker pull dockerfile
 
 We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)(link to see the image) 
 
-![dockcompo](https://user-images.githubusercontent.com/56431002/147129903-6fd86e4c-809f-4b70-b13c-586d59036930.JPG)
+![Capturedh](https://user-images.githubusercontent.com/56431002/147145101-36ef2370-b81a-4373-ada0-969a79b9df92.JPG)
 
 To pull the Image run the command:
 
