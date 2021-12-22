@@ -173,12 +173,12 @@ cd k8s
 ```
 Then we create the deployments and services :
 ```
-kubectl create -f service.yaml
-kubectl create -f service-redis.yaml
-kubectl create -f deployment.yaml
-kubectl create -f deployment-redis.yaml
-kubectl create -f pv-claim.yaml
-kubectl create -f pvolume.yaml
+kubectl create -f service.yml
+kubectl create -f service-redis.yml
+kubectl create -f deployment.yml
+kubectl create -f deployment-redis.yml
+kubectl create -f pv-claim.yml
+kubectl create -f pvolume.yml
 ```
 
 When we Open the minikube dashboard We can see that the deployments are done :
