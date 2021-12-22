@@ -107,8 +107,6 @@ On Package.json we used the script "test": "mocha test/*.js", the script "test":
 
 ## Author
 
-Youssef ELYAZIGHI  
-youssef.elyazighi@edu.ece.fr
+Youssef ELYAZIGHI  youssef.elyazighi@edu.ece.fr
 
-Augustin BERTHOD
-augustin.berthod@edu.ece.fr
+Augustin BERTHOD  augustin.berthod@edu.ece.fr
