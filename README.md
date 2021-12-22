@@ -124,6 +124,11 @@ Then run the following command:
 ```
 vagrant up
 ```
+![unknown](https://user-images.githubusercontent.com/56431002/147143373-178ea7b1-d02f-45d6-b9b1-6907b053b580.png)
+![unknown](https://user-images.githubusercontent.com/56431002/147143382-18938b06-ee45-42fe-9705-65a0ee08f685.png)
+![unknown](https://user-images.githubusercontent.com/56431002/147143391-b7c156c0-5980-4eca-a33b-d8ed28b3fa5b.png)
+
+ We can see that we have found the files of Userapi in the synced Folder
 ## Docker image
 
 1. The Docker image of our application
@@ -134,13 +139,13 @@ We builded a Docker image of our application,to pull the image From the userapi 
 docker pull dockerfile
 ```
 ![Capturedoc](https://user-images.githubusercontent.com/56431002/147129714-b0d98e2f-60ba-4cd6-b50f-01837d803e4f.JPG)
-
+![dockcompo](https://user-images.githubusercontent.com/56431002/147129903-6fd86e4c-809f-4b70-b13c-586d59036930.JPG)
 
 2. The image on Docker Hub
 
 We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)(link to see the image) 
 
-![Capturedh](https://user-images.githubusercontent.com/56431002/147129731-ea652d9d-dc70-4a80-92d7-f979109b6fc3.JPG)
+![Capturedh](https://user-images.githubusercontent.com/56431002/147145101-36ef2370-b81a-4373-ada0-969a79b9df92.JPG)
 
 To pull the Image run the command:
 
@@ -154,8 +159,6 @@ For this part we created a docker-compose.yml at the root of the project wish wi
 ```
 docker-compose up 
 ```
-![dockcompo](https://user-images.githubusercontent.com/56431002/147129903-6fd86e4c-809f-4b70-b13c-586d59036930.JPG)
-
 ## Docker orchestration using Kubernetes
 
 1. Manifest Yaml
@@ -185,6 +188,10 @@ When we Open the minikube dashboard We can see that the deployments are done :
 ```
 minikube dashboard
 ```
+![kube](https://user-images.githubusercontent.com/56431002/147148535-2e42f406-18de-499d-a3e3-6be8dbfddb32.JPG)
+![pv](https://user-images.githubusercontent.com/56431002/147148720-624fcdba-56b1-4139-9dae-799656bc6fd2.JPG)
+![pvc](https://user-images.githubusercontent.com/56431002/147148728-031304ba-64a2-4fbe-aec1-294b5c3c23c1.JPG)
+
 
 ### 7. Make a service mesh using Istio
 
@@ -234,6 +241,12 @@ Then to get acces to the kiali dashboard we run the following command
 kubectl port-forward svc/kiali -n istio-system 20001
 ```
 Now we can access to the kiali console on http://localhost:20001
+
+# Links
+
+[Heroku](https://dashboard.heroku.com/apps/shrouded-taiga-19455)
+
+[DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)
 
 ## Author
 
