@@ -26,7 +26,7 @@ Implement Monitoring by using Prometheus and Grafana.
 5. container orchestration
 6. docker orchestration using Kubernetes
 7. service mesh using Istio
-8.Implement Monitoring
+8. Implement Monitoring
 
 ## Installation
 
