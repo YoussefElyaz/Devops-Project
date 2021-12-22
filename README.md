@@ -46,18 +46,20 @@ This application is written on NodeJS and it uses Redis database and other tools
 
 7. [Install Minikube](https://minikube.sigs.k8s.io/docs/start/)
 
-8. [Install Prometheus to K8s Cluster](https://www.lisenet.com/2021/install-and-configure-prometheus-monitoring-on-kubernetes/)
+8. [Install Istio](https://istio.io/latest/docs/setup/)
 
-9. [Install Grafana to K8s Cluster](https://grafana.com/docs/grafana/latest/installation/kubernetes/)
+9. [Install Prometheus to K8s Cluster](https://www.lisenet.com/2021/install-and-configure-prometheus-monitoring-on-kubernetes/)
+
+10. [Install Grafana to K8s Cluster](https://grafana.com/docs/grafana/latest/installation/kubernetes/)
 
 
-Go to the root directory of the application (userapi where `package.json` file is located) and run the following command :
+Go to the root directory of the application ( where `package.json` file is located) and run the following command :
 
 ```
 npm i
 ```
 
-## I-Web App
+## Web App
 
 1. Start a web server
 
@@ -67,7 +69,7 @@ From the root directory of the project run:
 npm start
 ```
 
-It will start a web server available in your browser at http://localhost:5000.
+It will start a web server available in your browser at http://localhost:3000.
 
 2. Create a user
 
@@ -104,7 +106,7 @@ On Package.json we used the script "test": "mocha test/*.js", the script "test":
 3. We Configured the worklow to deploy to Heroku and put the Heroku API Key on Github->Repository->Settings->Secret
 ![Capturegit](https://user-images.githubusercontent.com/56431002/147022515-e80ccbde-a270-4822-ad3b-9f798c1f71a8.JPG)
 
-To Test the CI/CD pipeline, re-rum the project and go to Actions.
+To Test the CI/CD pipeline, run the project and go to Actions.
 
 ## Virtual environment and IaC approach
 
@@ -131,12 +133,12 @@ We builded a Docker image of our application,to pull the image From the userapi 
 ```
 docker pull dockerfile
 ```
-Photo1
+
 
 2. The image on Docker Hub
 
-We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7) 
-Photo2
+We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)(link to see the image) 
+
 
 To pull the Image run the command:
 
@@ -146,41 +148,89 @@ docker pull driael/364c7fd23d7
 
 ## Container orchestration
 
-
+For this part we created a docker-compose.yml at the root of the project wish will allow us to run our App and redis database.
 ```
-docker-compose up
+docker-compose up 
 ```
 
 ## Docker orchestration using Kubernetes
-
 
 1. Manifest Yaml
 
 We created the kubernetes manifest yaml files ( deployment, service, persistent volume and persistent volume claim) wish will allow us to move and scale our containerized applications across clouds and data centers.
 
-To deploy the Manifest files we first started minikube with 
+To deploy the Manifest files we start minikube with the following command: 
 ```
 minikube start
 ```
 
-Then we run the following commands to get to the right file: and create a deployment:
+Then we run the following command to get to the right file:
 ```
 cd k8s
 ```
-Then create the deployments and services :
+Then we create the deployments and services :
 ```
-kubectl create -f service-app.yaml
+kubectl create -f service.yaml
 kubectl create -f service-redis.yaml
-kubectl create -f deployment-app.yaml
+kubectl create -f deployment.yaml
 kubectl create -f deployment-redis.yaml
+kubectl create -f pv-claim.yaml
+kubectl create -f pvolume.yaml
 ```
 
-Open the minikube dashboard
+When we Open the minikube dashboard We can see that the deployments are done :
 ```
 minikube dashboard
 ```
 
-We can see that the deployments are done.
+### 7. Make a service mesh using Istio
+
+In this part we created a service mesh using istio whish helps us managing communication between services.
+
+1.To start the service run the following command:
+```
+kubectl apply -f istio/deploy-istio.yaml
+```
+There's one pod running for each deployment
+
+2.then add the command line which makes kubectl and istio work together:
+```
+kubectl label namespace default istio-injection=enabled
+```
+3.We delete the deployments with the command below:
+```
+kubectl delete -f istio/deploy-istio.yaml
+```
+3.and apply the file again with:
+```
+kubectl apply -f istio/deploy-istio.yaml
+```
+4.then display the pods with the following command:
+``` 
+kubectl get pods
+```
+We can see that we have 2 pods runnings now for every deployment we made.  
+
+
+### 8. Implement Monitoring to your containerized application
+
+For the Monitoring part, we run the following command to get our deployment structure on kiali.
+
+We install kiali, Prometeus, zipkins and graphana 
+
+Then we use the following command below :
+```
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.12/samples/addons/kiali.yaml
+```
+To apply addons to kiali, Prometeus, zipkins and graphana
+```
+kubectl apply -f addons
+```
+Then to get acces to the kiali dashboard we run the following command
+```
+kubectl port-forward svc/kiali -n istio-system 20001
+```
+Now we can access to the kiali console on http://localhost:20001
 
 ## Author
 
