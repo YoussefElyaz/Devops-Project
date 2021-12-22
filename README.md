@@ -124,6 +124,11 @@ Then run the following command:
 ```
 vagrant up
 ```
+![unknown](https://user-images.githubusercontent.com/56431002/147143373-178ea7b1-d02f-45d6-b9b1-6907b053b580.png)
+![unknown](https://user-images.githubusercontent.com/56431002/147143382-18938b06-ee45-42fe-9705-65a0ee08f685.png)
+![unknown](https://user-images.githubusercontent.com/56431002/147143391-b7c156c0-5980-4eca-a33b-d8ed28b3fa5b.png)
+
+ We can see that we have found the files of Userapi in the synced Folder
 ## Docker image
 
 1. The Docker image of our application
