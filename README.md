@@ -108,13 +108,11 @@ On Package.json we used the script "test": "mocha test/*.js", the script "test":
 
 ## Docker image
 1- The Docker image for our application
-![Capturedoc](https://user-images.githubusercontent.com/56431002/147024089-1ceb0b86-c9df-4ef6-b250-19af789d0f7e.JPG)
+
 
 2-The image on Docker Hub
-![Capturedh1](https://user-images.githubusercontent.com/56431002/147024345-6ea595d9-655e-4e04-9e23-285c43223b3d.JPG)
 
-![Capturedh](https://user-images.githubusercontent.com/56431002/147024425-b473377d-13cf-4adb-a71f-743ec174093f.JPG)
-
+test
 
 
 ## Author
