@@ -5,7 +5,7 @@ const db = require('../src/dbClient')
 describe('User', () => {
   
   beforeEach(() => {
-    // Clean the DataBase before each test
+    // Clean the DataBase 
     db.flushdb()
   })
   
