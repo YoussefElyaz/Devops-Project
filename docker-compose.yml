@@ -6,7 +6,7 @@ networks:
 services:
   redis:
     hostname: "redis"
-    image: driael/364c7fd23d7
+    image: redis:alpine
     container_name: redis_container
     ports:
       - "6379:6379"
@@ -15,7 +15,7 @@ services:
       - back-tier
   app:
     hostname: "app"
-    image: projet:latest
+    image: driael/364c7fd23d7
     container_name: projet_container
     environment:
       REDIS_HOST: redis
