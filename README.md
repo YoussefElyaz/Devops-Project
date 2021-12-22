@@ -8,7 +8,7 @@ The Continuous Integration & Continuous Delivery (CI/CD) was made with [GithubAc
 We configured a virtual environment with [vagrant](https://www.vagrantup.com/) and provisioned
 it with [Ansible](https://docs.ansible.com/ansible/latest/index.html). 
 
-We also created a docker image of our application, pushed it on a [Dockerhub](https://hub.docker.com/)and made container orchestration using docker-compose.yml that will start our application.
+We also created a docker image of our application and pushed it on a [Dockerhub](https://hub.docker.com/), and made container orchestration using docker-compose.yml that will start our application.
 
 We made Docker orchestration by using kubernetes then create the Manifest Yaml files.
 
@@ -19,9 +19,14 @@ Implement Monitoring by using Prometheus and Grafana.
 
 ## Project Steps
 
-1. Start a web server
+1. Web App
 2. CI/CD pipeline
-3. Get a user
+3. virtual environment and IaC approach
+4. Build Docker image
+5. container orchestration
+6. docker orchestration using Kubernetes
+7. service mesh using Istio
+8.Implement Monitoring
 
 ## Installation
 
@@ -52,7 +57,7 @@ Go to the root directory of the application (userapi where `package.json` file i
 npm i
 ```
 
-## I-Web application
+## I-Web App
 
 1. Start a web server
 
@@ -90,7 +95,14 @@ From the root directory of the project, run:
 ```
 npm run test
 ```
-On Package.json I used the script "test": "mocha test/*.js", the script "test": "./node_modules/.bin/mocha test/*.js" doesn't recognize the directory when I run the npm run test or npm test.
+On Package.json we used the script "test": "mocha test/*.js", the script "test": "./node_modules/.bin/mocha test/*.js" doesn't recognize the directory when we run the npm run test or npm test.
+
+## CI/CD pipeline
+
+1. We Created a Git repository for the User API project and commited all the files.
+2. CI Workflow connects Node.js application to Redis
+3. Configuring the worklow to deploy to Heroku
+
 
 
 ## Author
