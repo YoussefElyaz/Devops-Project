@@ -211,11 +211,11 @@ kubectl label namespace default istio-injection=enabled
 ```
 kubectl delete -f istio/deploy-istio.yaml
 ```
-3.and apply the file again with:
+3.Then apply the file again with:
 ```
 kubectl apply -f istio/deploy-istio.yaml
 ```
-4.then display the pods with the following command:
+4.Now display the pods with the following command:
 ``` 
 kubectl get pods
 ```
@@ -236,11 +236,11 @@ To apply addons to kiali, Prometeus, zipkins and graphana
 ```
 kubectl apply -f addons
 ```
-Then to get acces to the kiali dashboard we run the following command
+To access to the kiali dashboard we run the following command
 ```
 kubectl port-forward svc/kiali -n istio-system 20001
 ```
-Now we can access to the kiali console on http://localhost:20001
+Now we can access to kiali on http://localhost:20001
 
 # Links
 
