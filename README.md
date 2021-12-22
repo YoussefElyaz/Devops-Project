@@ -139,12 +139,13 @@ We builded a Docker image of our application,to pull the image From the userapi 
 docker pull dockerfile
 ```
 ![Capturedoc](https://user-images.githubusercontent.com/56431002/147129714-b0d98e2f-60ba-4cd6-b50f-01837d803e4f.JPG)
+![Capturedh](https://user-images.githubusercontent.com/56431002/147129731-ea652d9d-dc70-4a80-92d7-f979109b6fc3.JPG)
+
 2. The image on Docker Hub
 
 We pushed our image on [DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)(link to see the image) 
 
 ![dockcompo](https://user-images.githubusercontent.com/56431002/147129903-6fd86e4c-809f-4b70-b13c-586d59036930.JPG)
-![Capturedh](https://user-images.githubusercontent.com/56431002/147129731-ea652d9d-dc70-4a80-92d7-f979109b6fc3.JPG)
 
 To pull the Image run the command:
 
