@@ -102,7 +102,7 @@ On Package.json we used the script "test": "mocha test/*.js", the script "test":
 1. We Created a Git repository for the User API project and commited all the files.
 2. CI Workflow connects Node.js application to Redis
 3. Configuring the worklow to deploy to Heroku
-
+![Capturegit](https://user-images.githubusercontent.com/56431002/147022515-e80ccbde-a270-4822-ad3b-9f798c1f71a8.JPG)
 
 
 ## Author
