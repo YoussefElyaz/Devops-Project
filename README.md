@@ -240,6 +240,11 @@ kubectl port-forward svc/kiali -n istio-system 20001
 ```
 Now we can access to the kiali console on http://localhost:20001
 
+# Links
+
+[Heroku](https://dashboard.heroku.com/apps/shrouded-taiga-19455)
+[DockerHub](https://hub.docker.com/r/driael/364c7fd23d7)
+
 ## Author
 
 Youssef ELYAZIGHI: youssef.elyazighi@edu.ece.fr
