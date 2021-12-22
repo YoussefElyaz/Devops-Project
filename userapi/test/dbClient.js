@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 
 let db
-//test
+//tests
 describe('Redis', () => {
   
   before(() => {
