@@ -5,20 +5,27 @@ user parameters in Redis database.
 
 The Continuous Integration & Continuous Delivery (CI/CD) was made with [GithubActions](https://github.com/features/actions) / [Heroku](https://dashboard.heroku.com/apps).
 
-We have configured a virtual environment with [vagrant](https://www.vagrantup.com/) and provisioned
+We configured a virtual environment with [vagrant](https://www.vagrantup.com/) and provisioned
 it with [Ansible](https://docs.ansible.com/ansible/latest/index.html). 
 
-We also created a docker image of our application, pushed it on a [Dockerhub](https://hub.docker.com/)and make container orchestration using docker-compose.yml that will start our application.
+We also created a docker image of our application, pushed it on a [Dockerhub](https://hub.docker.com/)and made container orchestration using docker-compose.yml that will start our application.
 
-## The Web APP
+We made Docker orchestration by using kubernetes then create the Manifest Yaml files.
+
+A service Mesh was made by using [Istio](https://istio.io/) to deploy our application and creating the configuration (route requestes and trafic shifting) between two different versions of our app.
+
+Implement Monitoring by using Prometheus and Grafana.
+
+
+## Project Steps
 
 1. Start a web server
-2. Create a user
+2. CI/CD pipeline
 3. Get a user
 
 ## Installation
 
-This application is written on NodeJS and it uses Redis database.
+This application is written on NodeJS and it uses Redis database and other tools.
 
 1. [Install NodeJS](https://nodejs.org/en/download/)
 
@@ -45,7 +52,7 @@ Go to the root directory of the application (userapi where `package.json` file i
 npm i
 ```
 
-## Usage
+## I-Web application
 
 1. Start a web server
 
@@ -74,16 +81,17 @@ It will output:
 {"status":"success","msg":"OK"}
 ```
 
-Another way to test your REST API is to use [Postman](https://www.postman.com/).
+We can also use [Postman](https://www.postman.com/) to test our REST API.
 
-## Testing
+3. Testing
 
 From the root directory of the project, run:
-On Package.json I used the script "test": "mocha test/*.js", the script "test": "./node_modules/.bin/mocha test/*.js" doesn't work when I run the npm run test or npm test.
 
 ```
 npm run test
 ```
+On Package.json I used the script "test": "mocha test/*.js", the script "test": "./node_modules/.bin/mocha test/*.js" doesn't recognize the directory when I run the npm run test or npm test.
+
 
 ## Author
 
