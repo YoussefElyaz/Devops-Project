@@ -154,7 +154,7 @@ For this part we created a docker-compose.yml at the root of the project wish wi
 ```
 docker-compose up 
 ```
-![Capturegit](https://user-images.githubusercontent.com/56431002/147129776-c0717405-fd3c-47a1-95ae-9fd9c47f21fa.JPG)
+![dockcompo](https://user-images.githubusercontent.com/56431002/147129903-6fd86e4c-809f-4b70-b13c-586d59036930.JPG)
 
 ## Docker orchestration using Kubernetes
 
